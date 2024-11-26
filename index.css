@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'InterVar';
+    src: url("./InterVariable.ttf");
+  }
+
+:root{
+    --orange: rgb(255, 149, 0);
+    --strokeSize: 16;
+    --strokeSize2: 17;
+    --size: 200px;
+    --bgColor: rgb(0, 0, 0);
+}
+
+html,
+body,
+#root
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bgColor);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sp_cin, #sp_cout{
+    fill: none;
+    stroke-width: var(--strokeSize);
+    stroke-dasharray: 565.48;
+}
+
+#sp_cin{
+    stroke: grey;
+    transform-origin: center;
+}
+
+#sp_mask{
+    fill: none;
+    stroke-width: var(--strokeSize2);
+    stroke: var(--bgColor);
+    stroke-dasharray: 565.48;
+    stroke-dashoffset: 400;
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+#sp_cout{
+    stroke: var(--orange);
+    stroke-dashoffset: 282.74;
+    /* stroke-dashoffset: -282.74; */
+    transform-origin: center;
+    /* transition: transform 0.5s, stroke-dashoffset 0.5s; */
+    transform: rotate(0deg);
+}
+
+#sp_line{
+    stroke-width: var(--strokeSize);
+    stroke: var(--orange);
+    transform-origin: center;
+    /* transition: transform 0.5s; */
+    /* transform: rotate(0deg); */
+}
+
+#sp_svg{
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1) rotate(-143deg);
+}
+
+#sp {
+    display: block;
+    height: var(--size);
+    width: var(--size);
+    /* border: 10px solid white; */
+}
+
+#sp_text{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-family: "InterVar";
+    font-size:medium;
+    color: var(--orange);
+    transform: translate(0, -60px);
+}
